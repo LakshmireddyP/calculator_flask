@@ -7,6 +7,9 @@ def welcome():
     return "Welcome to the flask"
 obj.route("/cal",methods=['GET'])
 def math_operations(operation,num1,num2):
+    operation=request.json["operation"]
+    num1=request.json["num1"]
+    num2=request.json["num2"]
     if operation=="add":
         result=num1+num2
     elif operation=="sub":
